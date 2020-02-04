@@ -1,5 +1,9 @@
 public class LeapYear {
     public static boolean check(int year) {
+        if(year % 100 == 0 && !isDivisibleBy400(year)){
+            return false;
+        }
+
         if(isDivisibleBy400(year)){
             return true;
         }
