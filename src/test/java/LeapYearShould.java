@@ -18,4 +18,9 @@ public class LeapYearShould {
     public void be_a_leap_year_when_is_divisible_by_400() {
         assertTrue(LeapYear.check(1600));
     }
+
+    @Test
+    public void not_be_a_leap_year_when_is_divisible_by_100_and_not_divisible_by_400() {
+        assertFalse(LeapYear.check(1800));
+    }
 }
